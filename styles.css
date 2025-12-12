@@ -1,0 +1,192 @@
+/* --- 1. BASE STYLES & TYPOGRAPHY --- */
+:root {
+    --primary-color: #007BFF; /* A clean, modern blue */
+    --secondary-color: #343A40; /* Dark gray for text */
+    --light-bg: #F8F9FA; /* Very light gray for alternate sections */
+    --white: #FFFFFF;
+    --font-stack: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+h2 { font-size: 2.5em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.3em; }
+
+p { margin-bottom: 1em; }
+
+/* --- 2. HEADER & NAVIGATION --- */
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid #E9ECEF;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0; /* Remove default container padding for header content */
+}
+
+header h1 {
+    font-size: 1.6em;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    margin-left: 25px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 30px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- 3. HERO SECTION --- */
+.hero {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+    text-align: left;
+}
+
+.hero h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero .tagline {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.contact-links a, .contact-links span {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+/* --- 4. CONTENT SECTIONS --- */
+.section-content {
+    padding: 60px 0;
+}
+
+.alternate-bg {
+    background-color: var(--light-bg);
+}
+
+/* --- 5. SKILLS GRID --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.skill-category {
+    padding: 20px;
+    border: 1px solid #DEE2E6;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+
+.skill-category:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.skill-category h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    border-bottom: 2px solid #E9ECEF;
+    padding-bottom: 5px;
+}
+
+/* --- 6. JOB CARD / EXPERIENCE --- */
+.job-card {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.job-card h4 {
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.company-info {
+    font-style: italic;
+    color: #6C757D;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.job-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.job-card ul li {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><circle fill="%23007BFF" cx="5" cy="5" r="5"/></svg>') no-repeat left 0.5em;
+    background-size: 6px 6px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+/* --- 7. FOOTER --- */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--light-bg);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
